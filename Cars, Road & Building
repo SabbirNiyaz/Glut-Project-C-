@@ -1,0 +1,213 @@
+#include <GL/glut.h>
+#include <windows.h>  // For MS Windows
+#include <math.h>     // Math functions
+#define PI 3.14159265358979323846
+
+// Function to draw the Road
+void drawRoad() {
+   glColor3ub(119, 136, 153); // Road color
+   glBegin(GL_POLYGON);
+       glVertex2f(0.0, 0.0);
+       glVertex2f(80.0, 0.0);
+       glVertex2f(80.0, 15.0);
+       glVertex2f(0.0, 15.0);
+   glEnd();
+}
+
+void drawSideLine1() {
+   glColor3ub(255, 255, 255); // Side line color 1
+   glBegin(GL_POLYGON);
+       glVertex2f(0.0, 2.0);
+       glVertex2f(80.0, 2.0);
+       glVertex2f(80.0, 3.0);
+       glVertex2f(0.0, 3.0);
+   glEnd();
+}
+
+void drawSideLine2() {
+   glColor3ub(255, 255, 255); // Side line color 2
+   glBegin(GL_POLYGON);
+       glVertex2f(0.0, 14.0);
+       glVertex2f(80.0, 14.0);
+       glVertex2f(80.0, 13.0);
+       glVertex2f(0.0, 13.0);
+   glEnd();
+}
+
+void drawMiddleLine1() {
+   glColor3ub(255, 255, 255); // Middle line color
+   glBegin(GL_POLYGON);
+       glVertex2f(5.0, 8.0);
+       glVertex2f(10.0, 8.0);
+       glVertex2f(10.2, 9.2);
+       glVertex2f(5.2, 9.2);
+   glEnd();
+}
+
+void drawMiddleLine2() {
+   glColor3ub(255, 255, 255); // Middle line color
+   glBegin(GL_POLYGON);
+       glVertex2f(15.0, 8.0);
+       glVertex2f(20.0, 8.0);
+       glVertex2f(20.2, 9.2);
+       glVertex2f(15.2, 9.2);
+   glEnd();
+}
+
+void drawMiddleLine3() {
+   glColor3ub(255, 255, 255); // Middle line color
+   glBegin(GL_POLYGON);
+       glVertex2f(25.0, 8.0);
+       glVertex2f(30.0, 8.0);
+       glVertex2f(30.2, 9.2);
+       glVertex2f(25.2, 9.2);
+   glEnd();
+}
+
+void drawMiddleLine4() {
+   glColor3ub(255, 255, 255); // Middle line color
+   glBegin(GL_POLYGON);
+       glVertex2f(35.0, 8.0);
+       glVertex2f(40.0, 8.0);
+       glVertex2f(40.2, 9.2);
+       glVertex2f(35.2, 9.2);
+   glEnd();
+}
+
+void drawMiddleLine5() {
+   glColor3ub(255, 255, 255); // Middle line color
+   glBegin(GL_POLYGON);
+       glVertex2f(45.0, 8.0);
+       glVertex2f(50.0, 8.0);
+       glVertex2f(50.2, 9.2);
+       glVertex2f(45.2, 9.2);
+   glEnd();
+}
+
+void drawMiddleLine6() {
+   glColor3ub(255, 255, 255); // Middle line color
+   glBegin(GL_POLYGON);
+       glVertex2f(55.0, 8.0);
+       glVertex2f(60.0, 8.0);
+       glVertex2f(60.2, 9.2);
+       glVertex2f(55.2, 9.2);
+   glEnd();
+}
+
+void drawMiddleLine7() {
+   glColor3ub(255, 255, 255); // Middle line color
+   glBegin(GL_POLYGON);
+       glVertex2f(65.0, 8.0);
+       glVertex2f(70.0, 8.0);
+       glVertex2f(70.2, 9.2);
+       glVertex2f(65.2, 9.2);
+   glEnd();
+}
+
+void drawMiddleLine8() {
+   glColor3ub(255, 255, 255); // Middle line color
+   glBegin(GL_POLYGON);
+       glVertex2f(75.0, 8.0);
+       glVertex2f(80.0, 8.0);
+       glVertex2f(80.2, 9.2);
+       glVertex2f(75.2, 9.2);
+   glEnd();
+}
+void drawGreenTree() {
+   glColor3ub(34, 139, 34);
+   glBegin(GL_POLYGON);
+       glVertex2f(0.0, 15.0);
+       glVertex2f(80.0, 15.0);
+       glVertex2f(80.0, 17.0);
+       glVertex2f(0.0, 17.0);
+   glEnd();
+}
+void drawGreenTree2() {
+   glColor3ub(50, 205, 50);
+   glBegin(GL_POLYGON);
+       glVertex2f(0.0, 17.0);
+       glVertex2f(80.0, 17.0);
+       glVertex2f(80.0, 17.6);
+       glVertex2f(0.0, 17.6);
+   glEnd();
+}
+void drawPillerBase() {
+   glColor3ub(54, 100, 139);
+   glBegin(GL_POLYGON);
+       glVertex2f(0.0, 19.0);
+       glVertex2f(80.0, 19.0);
+       glVertex2f(80.0, 17.6);
+       glVertex2f(0.0, 17.6);
+   glEnd();
+}
+void drawBuilding1() {
+   glColor3ub(108, 166, 205);
+   glBegin(GL_POLYGON);
+       glVertex2f(0.0, 19.0);
+       glVertex2f(0.0, 28.0);
+       glVertex2f(3.0, 28.0);
+       glVertex2f(3.0, 26.0);
+       glVertex2f(5.0, 26.0);
+       glVertex2f(5.0, 19.0);
+   glEnd();
+}
+void drawBuilding2() {
+   glColor3ub(108, 166, 205);
+   glBegin(GL_POLYGON);
+       glVertex2f(10.0, 19.0);
+       glVertex2f(10.0, 38.0);
+       glVertex2f(15.0, 38.0);
+       glVertex2f(20.0, 38.0);
+       glVertex2f(20.0, 19.0);
+
+   glEnd();
+}
+// Function to draw a circle
+void drawCircle(GLfloat x, GLfloat y, GLfloat radius) {
+   int triangleAmount = 100; // Number of triangles used to approximate the circle
+   GLfloat twicePi = 2.0f * PI;
+   glColor3ub (255, 255, 0); // Set color for the sun (Yello)
+   glBegin(GL_TRIANGLE_FAN);
+       glVertex2f(x, y); // Center of circle
+       for (int i = 0; i <= triangleAmount; i++) {
+           glVertex2f(x + (radius * cos(i * twicePi / triangleAmount)),
+                      y + (radius * sin(i * twicePi / triangleAmount)));
+       }
+   glEnd();
+}
+
+// Display function to call flag and shapes drawing functions
+void display() {
+   glClear(GL_COLOR_BUFFER_BIT);  // Clear the color buffer
+   drawRoad();          // Call Road
+   drawSideLine1();     // Call side line 1
+   drawSideLine2();     // Call side line 2
+   drawMiddleLine1();   // Call middle line 1
+   drawMiddleLine2();   // Call middle line 2
+   drawMiddleLine3();   // Call middle line 3
+   drawMiddleLine4();   // Call middle line 4
+   drawMiddleLine5();   // Call middle line 5
+   drawMiddleLine6();   // Call middle line 6
+   drawMiddleLine7();   // Call middle line 7
+   drawMiddleLine8();   // Call middle line 8
+   drawGreenTree();
+   drawGreenTree2();
+   drawPillerBase();
+   drawBuilding1();
+   drawBuilding2();
+   drawCircle(4.0, 45.0, 1.6); // Call circle
+   glFlush();
+}
+
+int main(int argc, char** argv) {
+   glutInit(&argc, argv);
+   glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);  // Single buffering and RGB color mode
+   glutInitWindowSize(1920, 1080);  // Set window size
+   glutCreateWindow("Bangladesh and Vietnam Flags with Other Shapes");
+   glClearColor(0.53, 0.81, 0.92, 1.0);  // Set background color to sky blue
+   glMatrixMode(GL_PROJECTION);
+   gluOrtho2D(0.0, 80.0, 0.0, 50.0);  // Define coordinate system for 2D
+   glutDisplayFunc(display);  // Register display function
+   glutMainLoop();            // Enter the main loop
+   return 0;
+}
